@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Drivers</title>
+		<link rel="stylesheet" href="styless.css" />
+	</head>
+	<body>
+		<div class="container" id="login">
+			<h1>Iniciar sesión</h1>
+			<form id="formlogin">
+				<input type="text" id="driver-name" name="driver-name" placeholder="Ingresa tu nombre" required />
+				<button type="submit">Acceder</button>
+			</form>
+		</div>
+
+		<div class="container" id="car">
+			<h1>Elige tu vehículo</h1>
+			<form id="formvehicle">
+				<input type="text" id="placa" name="placa" placeholder="Ingresa el número de placa" required />
+				<button type="submit">Siguiente</button>
+			</form>
+		</div>
+
+		<div class="container" id="vehicle-status">
+			<h1 id="h1-vehicle-status"></h1>
+			<h1>Vehiculo Seleccionado</h1>
+			<div>
+				<button id="bt-activo">Activar</button>
+			</div>
+			<br />
+
+			<div>
+				<button id="bt-inactivo">Desactivar</button>
+			</div>
+			<br />
+
+			<div>
+				<p id="status-vehicle"></p>
+			</div>
+		</div>
+
+		<div class="container" id="nueva-ruta">
+			<h1>Nuevo Viaje</h1>
+			<div id="viajes"></div>
+		</div>
+
+		<div class="container" id="inicia-viaje">
+			<h1>Viaje en curso...</h1>
+			<div id="informacion-viaje"></div>
+			<div>
+				<button id="button-iniciar-viaje" type="button">Comenzar Viaje</button>
+				<button id="button-finalizar-viaje" type="button">Finalizar Viaje</button>
+			</div>
+			<br />
+			<p id="inicia-viaje"></p>
+		</div>
+
+		<script
+			src="https://cdn.socket.io/4.7.5/socket.io.min.js"
+			integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO"
+			crossorigin="anonymous"
+		></script>
+		<script src="index.js"></script>
+	</body>
+</html>
